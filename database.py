@@ -278,13 +278,6 @@ class Database:
         self._update()
         self.save()
         
-        
-        
-        
-
-        
-        
-        
 
     def delete(self, table_name, condition):
         '''
@@ -474,10 +467,7 @@ class Database:
         rowSLock.setdefault(pointer, 'locked')
         
         self._save_locks()
-        # print(f'Locking table "{table_name}"') 
-    
-    
-    
+        # print(f'Locking table "{table_name}"')
     
     
     def rowcheck(self, table_name, lock, pointer):
@@ -494,9 +484,7 @@ class Database:
         rowSLock = self.tables['meta_locks']._select_where('*', f'table_name=={table_name}').rowSLock[0]     
     
             
-    
-    
-       
+   
 
     def unlock_table(self, table_name, lock):
         '''
